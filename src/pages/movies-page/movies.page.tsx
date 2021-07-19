@@ -1,4 +1,4 @@
 import React from 'react';
 import './movies.page.sass';
 
-export const MoviesPage = () => <></>
+export const MoviesPage = () => <>Movies</>

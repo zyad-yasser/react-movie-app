@@ -2,9 +2,9 @@ import { MoviePage } from "../pages/movie-page/movie.page";
 import { MoviesPage } from "../pages/movies-page/movies.page";
 import { Route } from "../types/misc";
 
-export const Routers: Route[] = [
+export const routes: Route[] = [
   {
-    path: '/',
+    path: '/movies',
     component: MoviesPage,
     exact: true,
     name: "MoviesPage"

@@ -1,12 +1,9 @@
-export interface RouterProps {
-
-}
+export interface RouterProps {}
 
 export interface Route {
-
-    path: string,
-    component: any
-    exact: boolean,
-    name: string,
-
+  path: string;
+  component: any;
+  exact?: boolean;
+  name: string;
+  data?: any;
 }
