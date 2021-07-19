@@ -2,8 +2,9 @@ export interface RouterProps {}
 
 export interface Route {
   path: string;
-  component: any;
+  component?: any;
   exact?: boolean;
-  name: string;
+  name?: string;
   data?: any;
+  redirect?: string;
 }

@@ -1,3 +1,3 @@
 import './nav-bar.component.test'
 
-export const NavBar = () => (<></>)
+export const NavBar = () => (<>Navbar</>)
