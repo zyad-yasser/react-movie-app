@@ -1,22 +1,33 @@
+import axios, { AxiosRequestConfig } from 'axios';
 import { useState, useEffect } from 'react';
+import { baseURL } from '../config';
+
+const axiosRequestConfig: AxiosRequestConfig = {
+  baseURL,
+};
 
 export const useFetch = (url: string) => {
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
+  const [error, setError] = useState<Error | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [data, setData] = useState<any>(null);
 
   useEffect(() => {
     if (!url) return;
 
     const fetchData = async () => {
-      setLoading(true);
-      const response = await fetch(url);
-      const data = await response.json();
-      setData(data);
-      setLoading(false);
+      try {
+        setLoading(true);
+        const { data } = await axios(url, axiosRequestConfig);
+        setData(data);
+      } catch (error: any) {
+        setError(error as Error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchData();
   }, [url]);
 
-  return { loading, data };
+  return { loading, data, error };
 };
