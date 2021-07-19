@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.sass';
+import './app.component.sass';
 
 function App() {
   return (
