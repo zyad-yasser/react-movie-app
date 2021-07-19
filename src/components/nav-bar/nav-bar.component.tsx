@@ -1,6 +1,8 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Logo } from '../logo/logo.component';
+import { NavEndContent } from '../nav-end-content/nav-end-content.component';
+import { NavStartContent } from '../nav-start-content/nav-start-content.component';
 import './nav-bar.component.sass';
 
 export const NavBar = () => (
@@ -11,14 +13,10 @@ export const NavBar = () => (
           <Logo />
         </Link>
         <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <NavStartContent />
         </Nav>
         <Nav className="ml-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <NavEndContent />
         </Nav>
       </Container>
     </Navbar>

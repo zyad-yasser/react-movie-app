@@ -1,3 +1,49 @@
-import './nav-button.component.test'
+import './nav-button.component.sass';
+import { NavButton as INavButton } from '../../types/navbar';
+import { Dropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-export const NavButton = () => (<></>)
+interface Props {
+  button: INavButton;
+}
+
+export const NavDropDown = ({ button }: Props) => {
+  const [show, setShow] = useState<boolean>(false);
+
+  const handleDropdownOnHover = ({ type }: any) => {
+    const show = Boolean(type === 'mouseenter');
+    setShow(show);
+  };
+
+  return (
+    <div className="nav-drop-down">
+      <Dropdown onMouseLeave={handleDropdownOnHover}>
+        <div onMouseEnter={handleDropdownOnHover}>
+          <NavLink button={button} />
+        </div>
+
+        <Dropdown.Menu show={show!}>
+          {button.children!.map(({ name, path }, key: number) => (
+            <Dropdown.Item>
+              <NavLink button={{ name, path }} key={key}/>
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
+  );
+};
+
+export const NavLink = ({ button: { name, path } }: Props) =>
+  path ? <Link to={path}>{name}</Link> : <div>{name}</div>;
+
+export const NavButton = ({ button }: Props) => (
+  <div className="nav-button">
+    {button.children ? (
+      <NavDropDown button={button} />
+    ) : (
+      <NavLink button={button} />
+    )}
+  </div>
+);
