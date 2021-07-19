@@ -5,15 +5,15 @@ import { routes } from './routes';
 
 export const Router = (props: RouterProps) => (
   <>
-    {routes.map(({ path, component: Comp, exact, data }, key) =>
+    {routes.map(({ path, component: Comp, exact, data, redirect }, key) =>
       path === '*'
         ? (
-          <Redirect to={path} />
+          <Redirect to={ redirect! } />
         )
         : (
           <Route
             key={key}
-            exact
+            exact={exact}
             path={path}
             render={(props) => <Comp {...props} data={data} />}
           />
