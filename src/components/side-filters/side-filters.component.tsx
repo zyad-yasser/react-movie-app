@@ -1,3 +1,3 @@
-import './side-filters.component.test'
+import './side-filters.component.sass'
 
 export const SideFilters = () => (<></>)
