@@ -1,3 +1,4 @@
-export interface LayoutProps {
-  children: JSX.Element
+import { ComponentProps } from './main';
+export interface LayoutProps extends ComponentProps {
+  /** */
 }

@@ -1,3 +1,4 @@
+import { ComponentProps } from './main';
 export interface NavButton {
   name: string,
   path?: string,
@@ -5,7 +6,6 @@ export interface NavButton {
   children?: NavButton[],
 }
 
-export interface NavButtonProps {
+export interface NavButtonProps extends ComponentProps {
   button?: NavButton;
-  children?: JSX.Element;
 }
