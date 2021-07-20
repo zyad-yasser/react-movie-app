@@ -4,3 +4,7 @@ export interface NavButton {
   query?: string,
   children?: NavButton[],
 }
+
+export interface NavButtonProps {
+  button: NavButton;
+}
