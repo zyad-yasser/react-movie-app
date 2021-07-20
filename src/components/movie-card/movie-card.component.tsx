@@ -1,3 +1,10 @@
+import { MovieListItem } from '../../types/movies'
 import './movie-card.component.sass'
 
-export const MovieCard = () => (<></>)
+interface Props {
+  movie: MovieListItem
+}
+
+export const MovieCard = ({ movie }: Props) => (<>
+  
+</>)

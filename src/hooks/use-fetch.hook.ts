@@ -1,3 +1,4 @@
+import { UseFetchResult } from './../types/hooks';
 import axios, { AxiosRequestConfig } from 'axios';
 import { useState, useEffect } from 'react';
 import { apiKey, baseURL } from '../config';
@@ -9,7 +10,7 @@ const axiosRequestConfig: AxiosRequestConfig = {
   },
 };
 
-export const useFetch = (url: string) => {
+export const useFetch = <T>(url: string): UseFetchResult<T> => {
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [data, setData] = useState<any>(null);
