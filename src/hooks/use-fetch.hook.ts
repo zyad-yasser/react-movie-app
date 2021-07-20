@@ -1,9 +1,12 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { useState, useEffect } from 'react';
-import { baseURL } from '../config';
+import { apiKey, baseURL } from '../config';
 
 const axiosRequestConfig: AxiosRequestConfig = {
   baseURL,
+  params: {
+    api_key: apiKey
+  },
 };
 
 export const useFetch = (url: string) => {
