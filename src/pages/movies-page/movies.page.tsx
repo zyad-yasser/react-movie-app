@@ -9,6 +9,9 @@ export const MoviesPage = (props: PageProps) => {
   setTitle(title);
 
   return (<>
-    <div className="title h2">{ title }</div>
+    <div className="main-title text-start h2">{ title }</div>
+    <div className="page">
+      
+    </div>
   </>)
 }
