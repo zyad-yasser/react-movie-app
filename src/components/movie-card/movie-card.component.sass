@@ -1,0 +1,19 @@
+.movie-card-col
+	--numberOfDiscoverColumns: 1
+	--discoverColumnPadding: 30px
+	--maxPrimaryPageWidth: 1400px
+	width: calc((100vw - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) / var(--numberOfDiscoverColumns))
+	max-width: calc((var(--maxPrimaryPageWidth) - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) / var(--numberOfDiscoverColumns))
+
+	@media only screen and (min-width: 700px)
+		--numberOfDiscoverColumns: 2
+	@media only screen and (min-width: 900px)
+		--numberOfDiscoverColumns: 3
+	@media only screen and (min-width: 1040px)
+		--numberOfDiscoverColumns: 4
+	@media only screen and (min-width: 1240px)
+		--numberOfDiscoverColumns: 5
+
+	.poster
+		height: calc((100vw - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) / var(--numberOfDiscoverColumns) * 1.5)
+		max-height: calc((var(--maxPrimaryPageWidth) - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) / var(--numberOfDiscoverColumns) * 1.5)
