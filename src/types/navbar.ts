@@ -6,5 +6,6 @@ export interface NavButton {
 }
 
 export interface NavButtonProps {
-  button: NavButton;
+  button?: NavButton;
+  children?: JSX.Element;
 }
