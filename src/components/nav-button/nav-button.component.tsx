@@ -2,7 +2,7 @@ import './nav-button.component.sass';
 import { NavButton as INavButton } from '../../types/navbar';
 import { Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 interface Props {
   button: INavButton;
@@ -16,10 +16,15 @@ export const NavDropDown = ({ button }: Props) => {
     setShow(show);
   };
 
+  const handleClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+    return false;
+  };
+
   return (
     <div className="nav-drop-down">
       <Dropdown onMouseLeave={handleDropdownOnHover}>
-        <div onMouseEnter={handleDropdownOnHover}>
+        <div onClick={handleClick} onMouseEnter={handleDropdownOnHover}>
           <NavLink button={button} />
         </div>
 

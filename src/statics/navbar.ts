@@ -23,6 +23,23 @@ export const navStartContent: NavButton[] = [
     ],
   },
   {
+    name: 'TV Shows',
+    children: [
+      {
+        name: 'Popular',
+      },
+      {
+        name: 'Airing Today',
+      },
+      {
+        name: 'On TV',
+      },
+      {
+        name: 'Top Rated',
+      },
+    ],
+  },
+  {
     name: 'People',
     children: [
       {
