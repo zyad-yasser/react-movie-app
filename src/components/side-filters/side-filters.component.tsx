@@ -1,3 +1,12 @@
-import './side-filters.component.sass'
+import { filters } from '../../statics/filters';
+import { FilterCard } from '../filter-card/filter-card.component';
+import './side-filters.component.sass';
 
-export const SideFilters = () => (<></>)
+export const SideFilters = () => (
+  <>
+    {filters.map(({ name, component }) => (
+      <FilterCard name={name}>{component()}</FilterCard>
+    ))}
+    <button disabled className="search-btn">Search</button>
+  </>
+);

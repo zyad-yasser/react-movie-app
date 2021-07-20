@@ -25,10 +25,10 @@ export const MoviesPage = (props: PageProps) => {
       <div className="page">
         <Container fluid>
           <Row>
-            <Col lg={3} md={4} sm={12}>
+            <Col className="p-0 filters-col" lg={3} md={4} sm={12}>
               <SideFilters />
             </Col>
-            <Col lg={9} md={8} sm={12}>
+            <Col className="movies-col" lg={9} md={8} sm={12}>
               <MoviesList type={type} />
             </Col>
           </Row>
