@@ -4,7 +4,7 @@ import { Route } from '../types/router';
 
 export const routes: Route[] = [
   {
-    path: '/movies',
+    path: '/movies/:type',
     component: MoviesPage,
     exact: true,
     name: 'MoviesPage',
@@ -17,6 +17,6 @@ export const routes: Route[] = [
   },
   {
     path: '*',
-    redirect: '/movies',
+    redirect: '/movies/popular',
   },
 ];

@@ -1,11 +1,14 @@
-import React from 'react';
-import { ComponentProps } from '../../types/main';
+import { PageProps } from '../../types/main';
+import { setTitle } from '../../utils/main';
+import { capetalizeFirstLetter } from '../../utils/text';
 import './movies.page.sass';
 
-export const MoviesPage = (props: ComponentProps) => {
-  console.log(props)
-  const title = this
+export const MoviesPage = (props: PageProps) => {
+  const { type } = props.match!.params;
+  const title = `${ capetalizeFirstLetter(type) } Movies`;
+  setTitle(title);
+
   return (<>
-    <div className="">{  } Movies</div>
+    <div className="title h2">{ title }</div>
   </>)
 }
