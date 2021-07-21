@@ -17,7 +17,7 @@ export const MoviesPage = (props: PageProps) => {
     setTitle(title);
     setPageTitle(title);
     setType(type);
-  }, [type]);
+  }, [props.match]);
 
   return (
     <>

@@ -12,7 +12,8 @@ interface Props {
 
 export const MoviesList = ({ type }: Props) => {
   const apiMovieType = typesMap[type];
-  const { loading, error, data } = useFetch<PaginationOf<MovieListItem[]>>(
+  // TODO: Do loading and error handling
+  const { data } = useFetch<PaginationOf<MovieListItem[]>>(
     `${listMoviesUrl}/${apiMovieType}`
   );
   console.log(data);

@@ -26,7 +26,8 @@ export const CircleRating = ({ rating }: Props) => {
 
   useEffect(() => {
     configCircleRating();
-  }, [rating]);
+  });
+
   return (
     <div className="rating-circle progress" ref={wrapperEl}>
       <div className="label d-flex align-items-center justify-content-center position-absolute w-100 h-100">
