@@ -16,7 +16,7 @@ export const MovieContent = ({ id }: Props) => {
   );
   console.log(data);
   return (
-    <div className="movie-content w-100">
+    <div className="movie-content">
       <MovieHeader movie={data}/>
       <MovieInfo />
     </div>

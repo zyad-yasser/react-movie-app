@@ -13,7 +13,7 @@ const axiosRequestConfig: AxiosRequestConfig = {
 export const useFetch = <T>(url: string): UseFetchResult<T> => {
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any>({});
 
   useEffect(() => {
     if (!url) return;

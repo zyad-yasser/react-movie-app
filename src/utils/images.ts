@@ -1,3 +1,4 @@
-import { imagesBaseUrl } from './../config/index';
+import { imagesThumbnailBaseUrl, imagesOriginalBaseUrl } from './../config/index';
 
-export const getImageFullPath = (image: string) => `${imagesBaseUrl}${image}`;
+export const getImageThumbnailFullPath = (image: string) => `${imagesThumbnailBaseUrl}${image}`;
+export const getImageOriginalFullPath = (image: string) => `${imagesOriginalBaseUrl}${image}`;

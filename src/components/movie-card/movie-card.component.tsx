@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MovieListItem } from '../../types/movies';
-import { getImageFullPath } from '../../utils/images';
+import { getImageThumbnailFullPath } from '../../utils/images';
 import { CircleRating } from '../circle-rating/circle-rating.component';
 import './movie-card.component.sass';
 
@@ -15,7 +15,7 @@ export const MovieCard = ({
     <div className="movie-card">
       <div className="poster">
         <Link to={`/movie/${id}`}>
-          <img src={getImageFullPath(poster_path)} height="100%" alt="poster" />
+          <img src={getImageThumbnailFullPath(poster_path)} height="100%" alt="poster" />
         </Link>
       </div>
       <div className="info d-flex align-items-start flex-column position-relative">
