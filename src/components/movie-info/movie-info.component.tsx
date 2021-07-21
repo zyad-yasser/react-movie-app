@@ -1,3 +1,5 @@
 import './movie-info.component.sass'
 
-export const MovieInfo = () => (<></>)
+export const MovieInfo = () => (<div className="movie-header">
+  
+</div>)
