@@ -1,3 +1,3 @@
-import './movie-header.component.test'
+import './movie-header.component.sass'
 
 export const MovieHeader = () => (<></>)
