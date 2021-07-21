@@ -17,7 +17,7 @@ export const MoviesList = ({ type }: Props) => {
   );
   console.log(data);
   return (
-    <div className="movie-list row w-100 m-0">
+    <div className="movie-list justify-content-between row w-100">
       {data?.results?.length &&
         data.results.map((movie: MovieListItem, key: number) => (
           <MovieCard key={key} movie={movie} />
