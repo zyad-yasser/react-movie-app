@@ -14,7 +14,9 @@ export const MovieCard = ({
   <div className="movie-card-col d-flex">
     <div className="movie-card">
       <div className="poster">
-        <img src={getImageFullPath(poster_path)} height="100%" alt="poster" />
+        <Link to={`/movie/${id}`}>
+          <img src={getImageFullPath(poster_path)} height="100%" alt="poster" />
+        </Link>
       </div>
       <div className="info d-flex align-items-start flex-column position-relative">
         <div className="rating position-absolute">

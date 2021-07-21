@@ -1,0 +1,17 @@
+@mixin draw-progress($progress, $color)
+	.pie
+		.half-circle
+			border-color: $color
+		.left-side
+			transform: rotate(calc($progress * 3.6deg))
+		@if $progress <= 50
+			.right-side
+				display: none
+		@else
+			clip: rect(auto, auto, auto, auto)
+			.right-side
+				transform: rotate(180deg)
+
+@mixin size($width, $height)
+	height: $height
+	width: $width
