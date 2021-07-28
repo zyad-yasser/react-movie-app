@@ -30,7 +30,7 @@ export const MovieHeader = ({ movie }: Props) => {
         </div>
         <div className="movie-info flex-grow-1">
           <MovieHeaderTitle movie={movie} />
-          <MovieHeaderActions />
+          <MovieHeaderActions movie={movie} />
           <MovieHeaderInfo movie={movie} />
         </div>
       </div>

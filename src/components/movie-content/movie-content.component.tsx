@@ -11,13 +11,10 @@ interface Props {
 
 export const MovieContent = ({ id }: Props) => {
   // TODO: Do loading and error handling
-  const { data } = useFetch<Movie>(
-    `${getMovieDataUrl}/${id}`
-  );
-  console.log(data);
+  const { data } = useFetch<Movie>(`${getMovieDataUrl}/${id}`);
   return (
     <div className="movie-content">
-      <MovieHeader movie={data}/>
+      {Object.keys(data).length && <MovieHeader movie={data} />}
       <MovieInfo />
     </div>
   );

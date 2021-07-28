@@ -10,18 +10,19 @@
 	--color: 210, 213, 67
 	.label
 		z-index: 1
-		font-size: 0.9em
+		font-size: calc((var(--size) / 3))
 		font-weight: 600
 		color: #FFF
 		.percentage
-			font-size: 0.5em
+			font-size: calc((var(--size) / 6))
+			line-height: 0
 	.dimmed-pie
 		@include size(100%, 100%)
-		transform: scale(0.9)
+		transform: scale(0.85)
 		border-radius: 50%
 		border: calc((var(--size) / 12)) solid rgba(var(--color), 0.2)
 	.pie
-		transform: scale(0.9)
+		transform: scale(0.85)
 		@include size(100%, 100%)
 		clip: rect(0, var(--size), var(--size), calc(var(--size) / 2))
 		left: 0

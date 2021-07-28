@@ -26,7 +26,7 @@ export const NavDropDown = ({ button }: NavButtonProps) => {
 
         <Dropdown.Menu show={show!}>
           {button!.children!.map(({ name, path }, key: number) => (
-            <Dropdown.Item>
+            <Dropdown.Item key={key}>
               <NavLink button={{ name, path }} key={key} />
             </Dropdown.Item>
           ))}
