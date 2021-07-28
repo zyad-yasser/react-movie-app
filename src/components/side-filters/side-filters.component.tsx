@@ -4,9 +4,11 @@ import './side-filters.component.sass';
 
 export const SideFilters = () => (
   <>
-    {filters.map(({ name, component }) => (
-      <FilterCard name={name}>{component()}</FilterCard>
+    {filters.map(({ name, component }, key) => (
+      <FilterCard key={key} name={name}>{component()}</FilterCard>
     ))}
-    <button disabled className="search-btn">Search</button>
+    <button disabled className="search-btn">
+      Search
+    </button>
   </>
 );

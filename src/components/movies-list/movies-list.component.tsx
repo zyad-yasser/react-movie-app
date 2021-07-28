@@ -16,7 +16,6 @@ export const MoviesList = ({ type }: Props) => {
   const { data } = useFetch<PaginationOf<MovieListItem[]>>(
     `${listMoviesUrl}/${apiMovieType}`
   );
-  console.log(data);
   return (
     <div className="movie-list justify-content-between row w-100">
       {data?.results?.length &&

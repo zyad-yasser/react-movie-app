@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { Movie } from '../../types/movies';
 import {
   getImageOriginalFullPath,
@@ -8,7 +7,6 @@ import { MovieHeaderActions } from '../movie-header-actions/movie-header-actions
 import { MovieHeaderInfo } from '../movie-header-info/movie-header-info.component';
 import { MovieHeaderTitle } from '../movie-header-title/movie-header-title.component';
 import './movie-header.component.sass';
-const Grade = require('grade-js');
 
 interface Props {
   movie: Movie;

@@ -9,11 +9,11 @@ interface Props {
 
 export const MovieHeaderTitle = ({
   movie: {
-    title,
-    release_date,
-    genres,
-    production_countries: [{ iso_3166_1: releaseCountryISO }],
-    runtime,
+    title = '',
+    release_date = '',
+    genres = [],
+    production_countries: [{ iso_3166_1: releaseCountryISO }] = [ {} as any ],
+    runtime = 0,
     adult,
   },
 }: Props) => {
