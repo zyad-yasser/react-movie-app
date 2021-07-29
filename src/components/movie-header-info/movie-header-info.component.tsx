@@ -15,7 +15,7 @@ export const MovieHeaderInfo = ({ movie }: Props) => {
     <div className="title-big">Overview</div>
     <div className="overview">{ overview }</div>
     <div className="credits row">
-      {credits && headerCredits.map(({ name, value, skip }) => <Col xs={4} className="one-credit">
+      {credits && headerCredits.map(({ name, value, skip }, key) => <Col key={key} xs={4} className="one-credit">
         <div className="title-small">{getPersonNameByJob(credits, value, skip) }</div>
         <div className="value">{ name }</div>
       </Col>)}

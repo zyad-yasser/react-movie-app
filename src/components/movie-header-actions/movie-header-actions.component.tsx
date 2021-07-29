@@ -1,4 +1,3 @@
-import { useState, useRef } from 'react';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { actionButtons } from '../../statics/action-buttons';
 import { Movie } from '../../types/movies';

@@ -5,7 +5,7 @@ interface Props {
   rating: number;
 }
 
-export const CircleRating = ({ rating }: Props) => {
+export const CircleRating = ({ rating = 0 }: Props) => {
 
   const ratingColor = () => {
     return rating >= 7

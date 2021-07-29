@@ -16,21 +16,26 @@ export const useFetch = <T>(url: string): UseFetchResult<T> => {
   const [data, setData] = useState<any>({});
 
   useEffect(() => {
-    if (!url) return;
+    let isCancelled = false;
+    if (!url || url.includes('undefined')) return;
 
     const fetchData = async () => {
       try {
         setLoading(true);
         const { data } = await axios(url, axiosRequestConfig);
-        setData(data);
+        !isCancelled && setData(data);
       } catch (error: any) {
-        setError(error as Error);
+        !isCancelled && setError(error as Error);
       } finally {
-        setLoading(false);
+        !isCancelled && setLoading(false);
       }
     };
 
     fetchData();
+
+    return () => {
+      isCancelled = true;
+    };
   }, [url]);
 
   return { loading, data, error };
