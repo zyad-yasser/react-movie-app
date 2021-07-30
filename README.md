@@ -13,6 +13,7 @@
 ### Deal with the source code
 - Clone the latest code
 - Install dependencies `$ npm install`
+- Add .env.development file with values as the example given in .env.development.example
 - Run the app `$ npm run start`
 - Build the app `$ npm run build`
 
